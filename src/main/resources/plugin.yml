@@ -1,0 +1,5 @@
+name: Backpack
+version: 1.0.0
+main: me.nico.backpack.Backpack
+author: Nico
+api: ["1.0.0"]
