@@ -23,10 +23,11 @@ public class BackpackManager {
 
     public void showBackpack(@NotNull Player player) {
         ChestFakeInventory chestFakeInventory = new ChestFakeInventory();
+		String invString = (String) this.plugin.getBackpackscfg().get(player.getName());
 
-        if(!this.plugin.getBackpacks().containsKey(player.getName())) {
+        if(!this.plugin.getBackpacks().containsKey(player.getName()) && invString != null) {
             final Map<Integer, Item> items = new HashMap<>();
-            this.api.inventoryFromString((String) this.plugin.getBackpackscfg().get(player.getName())).forEach(items::put);
+            this.api.inventoryFromString(invString).forEach(items::put);
 
             chestFakeInventory.setContents(items);
             this.plugin.getBackpacks().put(player.getName(), chestFakeInventory);
