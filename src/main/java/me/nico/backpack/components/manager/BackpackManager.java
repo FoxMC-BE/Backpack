@@ -36,7 +36,7 @@ public class BackpackManager {
         }
 
         chestFakeInventory.addListener(this::onFakeSlotChange);
-        chestFakeInventory.setName("Backpack");
+        chestFakeInventory.setName(player.getName() + "'s Backpack");
 
         player.addWindow(chestFakeInventory);
     }

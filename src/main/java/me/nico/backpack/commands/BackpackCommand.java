@@ -13,7 +13,7 @@ public class BackpackCommand extends PluginCommand<Backpack> {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if(sender instanceof Player) {
+        if(sender instanceof Player && sender.hasPermission("backpack.use")) {
             this.getPlugin().getManager().showBackpack(((Player) sender));
         }
 
