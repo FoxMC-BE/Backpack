@@ -2,6 +2,5 @@
 A Backpack plugin for Nukkit.
 
 # Deps
- - Fakeinventories
-
-
+ - FakeInventories
+ - MongoDriver

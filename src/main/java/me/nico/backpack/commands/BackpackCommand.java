@@ -6,6 +6,7 @@ import cn.nukkit.command.PluginCommand;
 import me.nico.backpack.Backpack;
 
 public class BackpackCommand extends PluginCommand<Backpack> {
+
     public BackpackCommand(Backpack plugin) {
         super("backpack", plugin);
         this.setAliases(new String[]{ "bp" });
@@ -13,10 +14,9 @@ public class BackpackCommand extends PluginCommand<Backpack> {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if(sender instanceof Player && sender.hasPermission("backpack.use")) {
+        if (sender instanceof Player && sender.hasPermission("backpack.use")) {
             this.getPlugin().getManager().showBackpack(((Player) sender));
         }
-
         return false;
     }
 }
