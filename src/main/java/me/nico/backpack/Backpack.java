@@ -87,7 +87,6 @@ public class Backpack extends PluginBase implements Listener {
             data.put("uuid", uuid);
             data.put("backpack", "");
             DatabaseHandler.create(data);
-            inv.setContents(this.api.inventoryFromString(""));
         } else {
             inv.setContents(this.api.inventoryFromString((String) map.get("backpack")));
         }

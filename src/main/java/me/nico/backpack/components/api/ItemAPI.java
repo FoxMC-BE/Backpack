@@ -15,7 +15,7 @@ public class ItemAPI {
     public String inventoryToString(Inventory inventory) {
         StringBuilder builder = new StringBuilder();
         inventory.getContents().forEach(((slot, item) -> builder.append(itemToString(slot, item)).append(";")));
-        return builder.substring(0, builder.toString().length() - 1);
+        return builder.substring(0, builder.length() - 1);
     }
 
     public Map<Integer, Item> inventoryFromString(String invString) {
