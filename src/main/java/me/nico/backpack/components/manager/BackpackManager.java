@@ -16,6 +16,7 @@ public class BackpackManager {
     }
 
     private void onFakeSlotChange(FakeSlotChangeEvent event) {
-        Backpack.CACHE.put(event.getPlayer().getUniqueId().toString(), event.getInventory());
+        String uuid = event.getPlayer().getUniqueId().toString();
+        Backpack.CACHE.replace(uuid, Backpack.CACHE.get(uuid), event.getInventory());
     }
 }
